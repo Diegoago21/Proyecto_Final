@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Rastrea Mi Bici</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+      aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"> </li>
+      </ul>
+
+      <!-- <form class="d-flex"> -->
+              
+          <a class="navbar-brand" routerLink="login" *ngIf="!estalogueado">
+            <h6> Iniciar sesion</h6>
+          </a>
+             
+        
+          <a class="navbar-brand" routerLink="login" *ngIf="estalogueado" (click)="cerrarSesion()">
+            <h6> Cerrar sesion</h6>
+          </a>        
+
+        <a class="navbar-brand" routerLink="about">
+          <h6> Quienes somos</h6>
+        </a>               
+      <!-- </form> -->
+    </div>
+  </div>
+</nav>
