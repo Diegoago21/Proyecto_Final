@@ -1,29 +1,31 @@
-
-
 <div class="contenedor">
 
     <main class="contenidomenu">
         <h2>Mapa</h2>
-        <!-- <h4>A continuacion podra diligenciar el menu de su restaurante</h4>
-        <br>
-       <div class="d-grid gap-3 d-md-flex justify-content-md-end">
-            <a><button [routerLink]="['/regisproducto']" class="btn btn-primary me-md-2" type="button">sopa</button></a>
-            <a><button [routerLink]="['/regisproducto']" class="btn btn-primary me-md-2" type="button">comida rapida</button></a>
-            <a><button [routerLink]="['/regisproducto']" class="btn btn-primary me-md-2" type="button">entrada</button></a>
+        <hr>
 
-          </div><br>
-          <div class="d-grid gap-3 d-md-flex justify-content-md">
-            <a><button [routerLink]="['/regisproducto']" class="btn btn-primary me-md-2 " type="button">postre</button></a>
-            <a><button [routerLink]="['/regisproducto']" class="btn btn-primary me-md-2" type="button">bebidas</button></a>
+
+        <iframe [src]="url" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" *ngIf="cedula=='1053861700'"></iframe>
+        <iframe [src]="url2" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" *ngIf="cedula== '123456789'"></iframe>
+
             
+            <div class="card" *ngIf="cedula != '1053861700' && cedula != '123456789' ">
+                <div class="card-header" >
+                    <strong>
+                        Alerta!
+                    </strong>                  
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <i class="fa-sharp fa-solid fa-circle-exclamation fa-flip fa-lg" style="color: #f44848;"></i>
+                    <p>Este Usuario No cuenta Con el Dispositivo Sincronizado.</p>
+                    <!--footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer-->
+                  </blockquote>
+                </div>
+              </div>
 
-          </div> -->
-
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.1668764909705!2d-75.5218968857364!3d5.076686539697346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476fe68261169d%3A0xe41aa422e3edc13f!2sUniversidad%20de%20Manizales!5e0!3m2!1ses!2sco!4v1661384847083!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <br>
-          <br>
-        
-        
     </main>
 
 </div>

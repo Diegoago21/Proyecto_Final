@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import {UserService} from './../../../Services/user.service';
 import {ToastrService} from 'ngx-toastr';
+import Swal from 'sweetalert2'; 
 
 @Component({
   selector: 'app-register',
@@ -47,6 +48,11 @@ form:FormGroup;
       this.ngOnInit();
       this.form.reset();
       this.toastr.success('Se agrego el usuario correctamente', 'Mensaje', );
+      Swal.fire(
+        'Creado!',
+        'Tu usuario ha sido creado exitosamente!',
+        'success'
+      )
     })
   }
 }
